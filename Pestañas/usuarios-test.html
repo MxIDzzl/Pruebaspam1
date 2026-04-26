@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title>SnapBook — Prueba de usuarios</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/usuarios-test.css" />
+</head>
+<body>
+  <header class="topbar">
+    <button id="backBtn" class="ghost-btn">← Volver</button>
+    <h1>Panel de prueba: usuarios</h1>
+  </header>
+
+  <main class="wrap">
+    <section class="notice">
+      <strong>Modo seguro:</strong> esta vista de pruebas no muestra contraseñas ni hashes.<br>
+      <small>Acceso permitido solo para: <code>admin.test@gmail.com</code> y <code>test@gmail.com</code>.</small>
+      <br><small>Sin Firebase: usa <code>?qa_local=1</code> en localhost para cargar usuarios mock.</small>
+    </section>
+
+    <section class="card">
+      <div class="card-head">
+        <h2>Usuarios registrados</h2>
+        <button id="reloadBtn" class="primary-btn">Actualizar</button>
+      </div>
+      <p id="meta" class="meta">Cargando…</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>UID</th>
+              <th>Nombre</th>
+              <th>Email</th>
+              <th>Última actualización</th>
+            </tr>
+          </thead>
+          <tbody id="usersBody"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="../logicas/usuarios-test.js"></script>
+</body>
+</html>
